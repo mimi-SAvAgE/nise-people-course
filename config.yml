@@ -1,0 +1,16 @@
+title: nise-people
+description: 'so uhm hehe hello i am an idiot who loves frogs '
+template:
+  repo: nise-people-template
+  name: nise-people
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
